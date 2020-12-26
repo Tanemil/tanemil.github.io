@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Caveat:wght@700&family=Indie+Flower&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #F8EDEB;
+}
+
+li, a, button{
+    font-family: "Acme";
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #FFB5A7; 
+    border-bottom: 2px solid black;
+}
+
+.logo {
+    font-family: "Indie Flower";
+    font-weight: 1000;
+    font-size: 32px;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{
+    color: #F8EDEB;
+}
+
+button{
+    padding: 4px 16px;
+    background-color: rgb(248, 237, 245);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: #FFB5A7;
+}
+
+button:hover{
+    background-color: black;
+}
+
+.box_image{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('IMG_20201225_182202.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-top: 35vh;
+    padding-bottom: 35vh;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_bg{
+    position: absolute;
+    background-color: rgba(0,0,0,0.1);
+    padding-bottom: 16px;
+    filter: blur(2px);
+    width: 100%;
+    height: 16vh;
+}
+
+.text{
+    position:absolute;
+    font-family: "Caveat";
+    font-weight: 500;
+    font-size: 80px;
+    color: #F8EDEB;
+    z-index: 2;
+}
+
+.separator {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+  .separator:before, .separator:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 2px solid #FFB5A7;
+    margin: auto;
+}
+  .separator:before {
+    margin-right: 10px
+}
+  .separator:after {
+    margin-left: 10px
+}
+
+.p_separator{
+    font-family: "Caveat";
+    font-weight: 500;
+    font-size: 60px;
+    color: #FFB5A7;
+}
+
+.about_me_img{
+    background-image: url('me1.jpg');
+    background-position: top center;
+    background-size: cover;
+    width: 450px;
+    height: 450px;
+    border-radius: 12%;
+    margin: 100px auto 100px auto ;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.p_box{
+    margin: auto;
+    width: 50%;
+    height: auto;
+    text-align: center;
+}
+
+.about_me_paragraph{
+    font-family: "Caveat";
+    font-weight: 500;
+    font-size: 45px;
+    color: #FFB5A7;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+.row1, .row2, .row3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img1{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_1.jpg');
+    background-size: cover;
+}
+
+#img2{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_2.jpg');
+    background-size: cover;
+}
+
+#img3{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_3.jpg');
+    background-size: cover;
+}
+
+#img4{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_4.jpg');
+    background-size: cover;
+}
+
+#img5{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_5.jpg');
+    background-size: cover;
+}
+
+#img6{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_6.jpg');
+    background-size: cover;
+}
+
+#img7{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_7.jpg');
+    background-size: cover;
+}
+
+#img8{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_8.jpg');
+    background-size: cover;
+}
+
+#img9{
+    width: 400px;
+    height: 400px;
+    background-image: url('img_9.jpg');
+    background-size: cover;
+}
+
+.foto{
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #FFB5A7;
+    border: 2px solid black;
+    transition: all 0.3s ease 0s;
+}
+
+.foto:hover{
+    background-color: black;
+}
+
+.p_price{
+    font-family: "Caveat";
+    font-weight: 500;
+    font-size: 64px;
+    color: #FFB5A7;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#prices_text{
+    text-align: center;
+}
+
+#chibi , #half_body, #head_anime{
+    padding-left: 10%;
+    text-align: left;
+}
+
+.money{
+    font-family: "Acme";
+    font-weight: 1000;
+    font-size: 64px;
+    font-style: oblique;
+    color: black;
+}
+
+footer{
+    height: 6vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_text{
+    font-size: 16px;
+    color: white;
+}
+
+
+
+
+
+   
+
+ 
