@@ -11,7 +11,7 @@ body{
     background-color: #F8EDEB;
 }
 
-li, a, button{
+li, a, .inst{
     font-family: "Acme";
     font-weight: 500;
     font-size: 20px;
@@ -54,7 +54,7 @@ header {
     color: #F8EDEB;
 }
 
-button{
+.inst{
     padding: 4px 16px;
     background-color: rgb(248, 237, 245);
     border-radius: 50px;
@@ -64,7 +64,7 @@ button{
     color: #FFB5A7;
 }
 
-button:hover{
+.inst:hover{
     background-color: black;
 }
 
@@ -82,6 +82,12 @@ button:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 1200px){
+    .nav__links{
+        display: none;
+    }
 }
 
 .text_bg{
@@ -131,13 +137,41 @@ button:hover{
 .about_me_img{
     background-image: url('me1.jpg');
     background-position: top center;
-    background-size: cover;
-    width: 450px;
+    width : 450px;
     height: 450px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 12%;
     margin: 100px auto 100px auto ;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+@media screen and (max-width: 800px){
+    .text{
+        font-size: 40px;
+    }
+    .about_me_paragraph{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about_me_img{
+      flex: 50%;
+      max-width: 50%;
+      max-height: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .about_me_img{
+      flex: 100%;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
 
 .p_box{
     margin: auto;
@@ -153,6 +187,12 @@ button:hover{
     color: #FFB5A7;
 }
 
+@media screen and (max-width: 800px){
+    .about_me_paragraph{
+        font-size: 30px;
+    }
+}
+
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
     position: fixed;
@@ -165,73 +205,82 @@ button:hover{
     padding-top: 60px;
 }
 
-.row1, .row2, .row3{
+.gallery{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 0 4px;
 }
 
+.row1, .row2, .row3{
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.row1 .img, .row2 .img, .row3 .img{
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .row1, .row2, .row3{
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .row1, .row2, .row3{
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
 #img1{
-    width: 400px;
-    height: 400px;
     background-image: url('img_1.jpg');
-    background-size: cover;
 }
 
 #img2{
-    width: 400px;
-    height: 400px;
     background-image: url('img_2.jpg');
-    background-size: cover;
 }
 
 #img3{
-    width: 400px;
-    height: 400px;
     background-image: url('img_3.jpg');
-    background-size: cover;
 }
 
 #img4{
-    width: 400px;
-    height: 400px;
     background-image: url('img_4.jpg');
-    background-size: cover;
 }
 
 #img5{
-    width: 400px;
-    height: 400px;
     background-image: url('img_5.jpg');
-    background-size: cover;
 }
 
 #img6{
-    width: 400px;
-    height: 400px;
     background-image: url('img_6.jpg');
-    background-size: cover;
 }
 
 #img7{
-    width: 400px;
-    height: 400px;
     background-image: url('img_7.jpg');
-    background-size: cover;
 }
 
 #img8{
-    width: 400px;
-    height: 400px;
     background-image: url('img_8.jpg');
-    background-size: cover;
 }
 
 #img9{
-    width: 400px;
-    height: 400px;
     background-image: url('img_9.jpg');
+}
+
+.img{
     background-size: cover;
+    background-position: center;
+    width: 50ch;
+    height: 50vh;
 }
 
 .foto{
@@ -254,6 +303,13 @@ button:hover{
     color: #FFB5A7;
     margin-top: 10vh;
     margin-bottom: 10vh;
+}
+
+@media screen and (max-width: 800px){
+    .p_price{
+        font-size: 48px;
+        font-weight: 300px;
+    }
 }
 
 #prices_text{
